@@ -1,0 +1,25 @@
+{
+  "name": "bs-css-emotion-footer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "bsb -make-world",
+    "watch": "bsb -make-world -w",
+    "dev": "parcel src/index.html",
+    "reformat": "bsrefmt --in-place src/*.re"
+  },
+  "keywords": [],
+  "author": "Alain Armand <aarmand.inbox@gmail.com>",
+  "license": "MIT",
+
+  "dependencies": {
+    "bs-css-emotion": "1.1.0",
+    "bs-css": "12.1.0",
+    "reason-react": "^0.7.0"
+  },
+  "devDependencies": {
+    "bs-platform": "^7.2.2",
+    "parcel-bundler": "^1.12.3"
+  }
+}

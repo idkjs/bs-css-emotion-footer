@@ -1,0 +1,17 @@
+/dist
+/lib/bs
+/lib/js/example
+/node_modules*
+/**/node_modules*
+/**/lib*
+/**/dist*
+/bs-css-emotion/example/bundle*.js
+npm-debug.log
+.DS_Store
+.idea
+.cache
+.merlin
+.nvmrc
+*.iml
+*.js
+*.log
