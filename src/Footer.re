@@ -17,11 +17,6 @@ module Styles = {
         lineHeight(`rem(1.3)),
         backgroundColor(black),
         fontFamilies([`custom("Menlo"), `custom("monospace")]),
-        // animation(waveAnimation),
-      ]),
-      style([media("(max-width: 768px)", [padding(px(10))])]),
-      style([
-        media("(max-width: 768px)", [fontSize(px(16)), color(red)]),
       ]),
       // style([
       //   selector(
@@ -52,12 +47,10 @@ module Styles = {
     ]);
 
   let li =
-    merge([
       style([
-        lastChild([gridColumn(1, 2), gridRow(1, 2)]),
-        selector("& > *", [marginBottom(px(10)), width(pct(100.))]),
+        selector("li:lastChild",[gridColumn(1, 2), gridRow(1, 2)]),
         selector(
-          "~ li > p",
+          "~ li p",
           [
             hover([
               animation(
@@ -68,7 +61,6 @@ module Styles = {
             ]),
           ],
         ),
-      ]),
     ]);
 
   let a =
