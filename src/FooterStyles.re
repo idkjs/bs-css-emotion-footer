@@ -44,7 +44,7 @@ div {
   display: flex;
   height: 100vh;
   width: 100%;
-  background-color: #002a38;
+  background-color: $reasonReactBlue;
   line-height: 1.3;
   font-family: Menlo, monospace;
 }

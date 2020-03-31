@@ -8,7 +8,6 @@ module Styles = {
       (25, [transform(rotate(deg(20.)))]),
       (75, [transform(rotate(deg(-15.)))]),
     ]);
-
   let div =
     style([
       display(`flex),
@@ -18,7 +17,35 @@ module Styles = {
       lineHeight(`rem(1.3)),
       fontFamilies([`custom("Menlo"), `custom("monospace")]),
     ]);
-
+  // let li =
+  //   merge([style([
+  //     selector("li:last-child", [gridColumn(1, 2), gridRow(1, 2)]),
+  //     hover([
+  //       selector(
+  //         "~ li p",
+  //         [
+  //           animation(~duration=300, ~iterationCount=infinite, waveAnimation),
+  //         ],
+  //       ),
+  //     ]),
+  //   ])
+  //   ]);
+  // let li =
+  //     style([
+  //       selector("li:last-child", [gridColumn(1, 2), gridRow(1, 2)]),
+  //       hover([animation(~duration=300, ~iterationCount=infinite, waveAnimation)]),
+  //     ]);
+  let li =
+    style([
+      hover([
+        selector(
+          "~ li p",
+          [
+            animation(~duration=300, ~iterationCount=infinite, waveAnimation),
+          ],
+        ),
+      ]),
+    ]);
   let ul =
     merge([
       style([
@@ -28,20 +55,6 @@ module Styles = {
         justifyContent(`center),
         margin(`auto),
         selector("li:last-child", [gridColumn(1, 2), gridRow(1, 2)]),
-        children([
-          hover([
-            selector(
-              "~ li p",
-              [
-                animation(
-                  ~duration=300,
-                  ~iterationCount=infinite,
-                  waveAnimation,
-                ),
-              ],
-            ),
-          ]),
-        ]),
       ]),
       style([media("(min-width: 500px)", [gridAutoFlow(`column)])]),
     ]);
@@ -77,17 +90,17 @@ module Styles = {
 let make = () =>
   <div className=Styles.div>
     <ul className=Styles.ul>
-      <li>
+      <li className=Styles.li>
         <a className=Styles.a href="https://twitter.com/_idkjs">
           {React.string("Twitter")}
         </a>
       </li>
-      <li>
+      <li className=Styles.li>
         <a className=Styles.a href="mailto:aarmand.inbox@gmail.com">
           {React.string("Email")}
         </a>
       </li>
-      <li>
+      <li className=Styles.li>
         <a className=Styles.a href="https://github.com/idkjs">
           {React.string("Github")}
         </a>
