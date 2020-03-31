@@ -32,9 +32,18 @@ To get the hand on the left side in either version, you have to add the `li:last
 
 
 ```reason
-...
-selector("li:last-child", [gridColumn(1, 2), gridRow(1, 2)]),
-...
+  let ul =
+    merge([
+      style([
+        display(`inlineGrid),
+        gridAutoFlow(`row),
+        gridGap(px(24)),
+        justifyContent(`center),
+        margin(`auto),
+        selector("li:last-child", [gridColumn(1, 2), gridRow(1, 2)]),
+      ]),
+      style([media("(min-width: 500px)", [gridAutoFlow(`column)])]),
+    ]);
 ```
 
 If you put it on the `li` tag it doesn't register.
