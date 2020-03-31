@@ -26,7 +26,7 @@ style##innerHTML #= FooterStyles.style;
 
 ```
 
-## Getting the `li` element styles working with the hand on the left sidde
+## Getting the `li` element styles working with the hand on the left side
 
 To get the hand on the left side in either version, you have to add the `li:last-child` call onto the parent `ul` element like so;
 
