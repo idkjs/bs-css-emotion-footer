@@ -2,6 +2,8 @@
 
 This is just a port of this [codepen](https://codepen.io/julesforrest/pen/qLpgNB).
 
+Reason version: [bs-css-emotion-footer.surge.sh](bs-css-emotion-footer.surge.sh)
+
 See discussion [here](https://github.com/reasonml-labs/bs-css/issues/190#issue-589683809)
 
 ![screenshot](./screenshot.png)
@@ -113,3 +115,12 @@ see [`src/FooterLi.re](./src/FooterLi.re)
       style([media("(min-width: 500px)", [gridAutoFlow(`column)])]),
     ]);
 ```
+
+### Deploying with [`surge.sh`](https://surge.sh)
+
+Install surge: `npm install --global surge`
+Build for production with `parcel build src/index.html`
+Change `dist` build output directory: `cd dist`.
+In terminal run `surge` and follow the instructions.
+
+Or just run `yarn deploy`.

@@ -7,7 +7,8 @@
     "build": "bsb -make-world",
     "watch": "bsb -make-world -w",
     "dev": "parcel src/index.html",
-    "reformat": "bsrefmt --in-place src/*.re"
+    "reformat": "bsrefmt --in-place src/*.re",
+    "deploy": "parcel build src/index.html && surge dist/ bs-css-emotion-footer.surge.sh"
   },
   "keywords": [],
   "author": "Alain Armand <aarmand.inbox@gmail.com>",

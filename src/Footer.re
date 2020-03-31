@@ -88,7 +88,7 @@ let make = () =>
         </a>
       </li>
       <li>
-        <a className=Styles.a href="https://github.com/idkjs">
+        <a className=Styles.a href="https://github.com/idkjs/bs-css-emotion-footer">
           {React.string("Github")}
         </a>
       </li>
