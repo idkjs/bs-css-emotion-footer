@@ -4,7 +4,7 @@
 
 This is a port of this [codepen](https://codepen.io/julesforrest/pen/qLpgNB).
 
-Reason version: [bs-css-emotion-footer.surge.sh](bs-css-emotion-footer.surge.sh)
+Reason version: [bs-css-emotion-footer.surge.sh](https://bs-css-emotion-footer.surge.sh/)
 
 See discussion [here](https://github.com/reasonml-labs/bs-css/issues/190#issue-589683809)
 
