@@ -56,7 +56,7 @@ module Styles = {
           ~x=px(0),
           ~y=px(-1),
           ~blur=px(0),
-          hsla(deg(0.), 0., 100., `num(0.4)),
+          hsla(deg(0.), `percent(0.), `percent(100.), `num(0.4)),
         ),
       ),
       hover([
@@ -66,7 +66,7 @@ module Styles = {
             ~x=px(0),
             ~y=em(-1.2),
             ~blur=px(0),
-            hsla(deg(0.), 0., 100., `num(0.4)),
+            hsla(deg(0.), `percent(0.), `percent(100.), `num(0.4)),
           ),
         ),
       ]),

@@ -1,6 +1,8 @@
 # [reasonml-labs/bs-css](https://github.com/reasonml-labs/bs-css) emotion footer demo
 
-This is just a port of this [codepen](https://codepen.io/julesforrest/pen/qLpgNB).
+## `Melange` + `Reason` with [`Melange`](https://github.com/melange-re/melange) as the build system.
+
+This is a port of this [codepen](https://codepen.io/julesforrest/pen/qLpgNB).
 
 Reason version: [bs-css-emotion-footer.surge.sh](bs-css-emotion-footer.surge.sh)
 
@@ -8,6 +10,14 @@ See discussion [here](https://github.com/reasonml-labs/bs-css/issues/190#issue-5
 
 ![screenshot](./screenshot.png)
 
+## Running
+Running `yarn && yarn start` will install the deps then build the use `esbuild` to create the `js` file being called in `index.html`.
+
+For file watching during development, the project uses [redemon](https://github.com/ulrikstrid/redemon) which you can run with `yarn watcher` after installing `redemon`.
+
+```sh
+yarn start
+```
 ## Issues
 
 Then hand is no repositioning to the left side of the array for some reason. It works if you use the following code to append the styles to the html head but no if the styles are defined in `Footer.re`:

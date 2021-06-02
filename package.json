@@ -4,23 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "bsb -make-world",
-    "watch": "bsb -make-world -w",
-    "dev": "parcel src/index.html",
+    "watch": "FORCE_COLOR=true BS_WATCH_CLEAR=true bsb -make-world -w | cat -n",
     "reformat": "bsrefmt --in-place src/*.re",
+    "dev": "parcel src/index.html",
+    "build": "rm -rf .parcel-cache dist && npm run pack && parcel build src/index.html --public-url ./",
+    "build-dev": "rm -rf .parcel-cache dist && esy bsb -make-world",
+    "postinstall": "esy",
+    "watcher": "esy x redemon --delay=1000 --verbose --path=src --extensions=bs.js yarn start",
+    "pack": "esbuild _build/default/src/App.bs.js --bundle --outfile=src/index.js",
+    "start": "npm run build-dev && npm run pack && npm run dev",
     "deploy": "parcel build src/index.html && surge dist/ bs-css-emotion-footer.surge.sh"
   },
   "keywords": [],
   "author": "Alain Armand <aarmand.inbox@gmail.com>",
   "license": "MIT",
-
   "dependencies": {
-    "bs-css-emotion": "1.1.0",
-    "bs-css": "12.1.0",
-    "reason-react": "^0.7.0"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "bs-css-emotion": "3.0.0",
+    "reason-react": "^0.9.1"
   },
   "devDependencies": {
-    "bs-platform": "^7.2.2",
-    "parcel-bundler": "^1.12.3"
+   "esbuild": "^0.12.5",
+    "esy": "^0.6.10",
+    "parcel": "^2.0.0-beta.2"
   }
 }

@@ -1,0 +1,464 @@
+;;;;{BSB GENERATED: NO EDIT
+(subdir ./node_modules/bs-css/src
+(rule
+(targets  Css_Core.ast)
+ (deps (:inputs  Css_Core.re) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_Core.cmj Css_Core.cmi Css_Core.cmt Css_Core.bs.js)
+ (mode (promote (until-clean) (only Css_Core.bs.js)))(deps (:inputs  Css_Core.ast)  (:ast_deps .././src/Css_Core.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/bs-css -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I .    -w a -bs-package-name bs-css -bs-package-output commonjs:./src:.bs.js -o Css_Core.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_Colors.ast)
+ (deps (:inputs  Css_Colors.re) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_Colors.cmj Css_Colors.cmi Css_Colors.cmt Css_Colors.bs.js)
+ (mode (promote (until-clean) (only Css_Colors.bs.js)))(deps (:inputs  Css_Colors.ast)  (:ast_deps .././src/Css_Colors.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/bs-css -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I .    -w a -bs-package-name bs-css -bs-package-output commonjs:./src:.bs.js -o Css_Colors.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_Js_Core.ast)
+ (deps (:inputs  Css_Js_Core.re) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_Js_Core.iast)
+ (deps (:inputs  Css_Js_Core.rei) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_Js_Core.cmi Css_Js_Core.cmti)
+ (deps (:inputs  Css_Js_Core.iast)  (:ast_deps .././src/Css_Js_Core.ast .././src/Css_Js_Core.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/bs-css -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I .    -w a -o Css_Js_Core.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_Js_Core.cmj Css_Js_Core.cmt Css_Js_Core.bs.js)
+ (mode (promote (until-clean) (only Css_Js_Core.bs.js)))(deps (:inputs  Css_Js_Core.ast)  Css_Js_Core.cmi (:ast_deps .././src/Css_Js_Core.ast .././src/Css_Js_Core.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/bs-css -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -bs-re-out -I .    -w a -bs-package-name bs-css -bs-package-output commonjs:./src:.bs.js -o Css_Js_Core.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_AtomicTypes.ast)
+ (deps (:inputs  Css_AtomicTypes.re) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_AtomicTypes.iast)
+ (deps (:inputs  Css_AtomicTypes.rei) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_AtomicTypes.cmi Css_AtomicTypes.cmti)
+ (deps (:inputs  Css_AtomicTypes.iast)  (:ast_deps .././src/Css_AtomicTypes.ast .././src/Css_AtomicTypes.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/bs-css -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I .    -w a -o Css_AtomicTypes.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_AtomicTypes.cmj Css_AtomicTypes.cmt Css_AtomicTypes.bs.js)
+ (mode (promote (until-clean) (only Css_AtomicTypes.bs.js)))(deps (:inputs  Css_AtomicTypes.ast)  Css_AtomicTypes.cmi (:ast_deps .././src/Css_AtomicTypes.ast .././src/Css_AtomicTypes.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/bs-css -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -bs-re-out -I .    -w a -bs-package-name bs-css -bs-package-output commonjs:./src:.bs.js -o Css_AtomicTypes.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_Legacy_Core.ast)
+ (deps (:inputs  Css_Legacy_Core.re) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_Legacy_Core.iast)
+ (deps (:inputs  Css_Legacy_Core.rei) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_Legacy_Core.cmi Css_Legacy_Core.cmti)
+ (deps (:inputs  Css_Legacy_Core.iast)  (:ast_deps .././src/Css_Legacy_Core.ast .././src/Css_Legacy_Core.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/bs-css -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I .    -w a -o Css_Legacy_Core.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css_Legacy_Core.cmj Css_Legacy_Core.cmt Css_Legacy_Core.bs.js)
+ (mode (promote (until-clean) (only Css_Legacy_Core.bs.js)))(deps (:inputs  Css_Legacy_Core.ast)  Css_Legacy_Core.cmi (:ast_deps .././src/Css_Legacy_Core.ast .././src/Css_Legacy_Core.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/bs-css -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -bs-re-out -I .    -w a -bs-package-name bs-css -bs-package-output commonjs:./src:.bs.js -o Css_Legacy_Core.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Css_Legacy_Core.bs.js Css_AtomicTypes.bs.js Css_Js_Core.bs.js Css_Colors.bs.js Css_Core.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir ./node_modules/bs-css(data_only_dirs .melange.eobjs))
+(subdir ./node_modules/bs-css/.melange.eobjs)
+
+(subdir ./node_modules/bs-css-emotion/src
+(rule
+(targets  Css.ast)
+ (deps (:inputs  Css.re) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Css.cmj Css.cmi Css.cmt Css.bs.js)
+ (mode (promote (until-clean) (only Css.bs.js)))(deps (:inputs  Css.ast)  (:ast_deps .././src/Css.ast ) ../bsconfig.json(alias ../../bs-css/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/bs-css-emotion -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I . -I ../../bs-css/src   -w a -bs-package-name bs-css-emotion -bs-package-output commonjs:./src:.bs.js -o Css.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  CssJs.ast)
+ (deps (:inputs  CssJs.re) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  CssJs.cmj CssJs.cmi CssJs.cmt CssJs.bs.js)
+ (mode (promote (until-clean) (only CssJs.bs.js)))(deps (:inputs  CssJs.ast)  (:ast_deps .././src/CssJs.ast ) ../bsconfig.json(alias ../../bs-css/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/bs-css-emotion -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I . -I ../../bs-css/src   -w a -bs-package-name bs-css-emotion -bs-package-output commonjs:./src:.bs.js -o CssJs.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  CssJs.bs.js Css.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir ./node_modules/bs-css-emotion(data_only_dirs .melange.eobjs))
+(subdir ./node_modules/bs-css-emotion/.melange.eobjs)
+
+(subdir ./node_modules/reason-react/src
+(dirs :standard legacy)
+(rule
+(targets  React.ast)
+ (deps (:inputs  React.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  React.cmj React.cmi React.cmt React.bs.js)
+ (mode (promote (until-clean) (only React.bs.js)))(deps (:inputs  React.ast)  (:ast_deps .././src/React.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I ./legacy -I .    -w a -bs-package-name reason-react -bs-package-output commonjs:./src:.bs.js -o React.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOM.ast)
+ (deps (:inputs  ReactDOM.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOM.cmj ReactDOM.cmi ReactDOM.cmt ReactDOM.bs.js)
+ (mode (promote (until-clean) (only ReactDOM.bs.js)))(deps (:inputs  ReactDOM.ast)  (:ast_deps .././src/ReactDOM.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I ./legacy -I .    -w a -bs-package-name reason-react -bs-package-output commonjs:./src:.bs.js -o ReactDOM.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEvent.ast)
+ (deps (:inputs  ReactEvent.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEvent.iast)
+ (deps (:inputs  ReactEvent.rei) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEvent.cmi ReactEvent.cmti)
+ (deps (:inputs  ReactEvent.iast)  (:ast_deps .././src/ReactEvent.ast .././src/ReactEvent.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I ./legacy -I .    -w a -o ReactEvent.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEvent.cmj ReactEvent.cmt ReactEvent.bs.js)
+ (mode (promote (until-clean) (only ReactEvent.bs.js)))(deps (:inputs  ReactEvent.ast)  ReactEvent.cmi (:ast_deps .././src/ReactEvent.ast .././src/ReactEvent.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -bs-re-out -I ./legacy -I .    -w a -bs-package-name reason-react -bs-package-output commonjs:./src:.bs.js -o ReactEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMStyle.ast)
+ (deps (:inputs  ReactDOMStyle.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMStyle.cmj ReactDOMStyle.cmi ReactDOMStyle.cmt ReactDOMStyle.bs.js)
+ (mode (promote (until-clean) (only ReactDOMStyle.bs.js)))(deps (:inputs  ReactDOMStyle.ast)  (:ast_deps .././src/ReactDOMStyle.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I ./legacy -I .    -w a -bs-package-name reason-react -bs-package-output commonjs:./src:.bs.js -o ReactDOMStyle.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMServer.ast)
+ (deps (:inputs  ReactDOMServer.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMServer.cmj ReactDOMServer.cmi ReactDOMServer.cmt ReactDOMServer.bs.js)
+ (mode (promote (until-clean) (only ReactDOMServer.bs.js)))(deps (:inputs  ReactDOMServer.ast)  (:ast_deps .././src/ReactDOMServer.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I ./legacy -I .    -w a -bs-package-name reason-react -bs-package-output commonjs:./src:.bs.js -o ReactDOMServer.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactTestUtils.ast)
+ (deps (:inputs  ReactTestUtils.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactTestUtils.iast)
+ (deps (:inputs  ReactTestUtils.rei) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactTestUtils.cmi ReactTestUtils.cmti)
+ (deps (:inputs  ReactTestUtils.iast)  (:ast_deps .././src/ReactTestUtils.ast .././src/ReactTestUtils.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I ./legacy -I .    -w a -o ReactTestUtils.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactTestUtils.cmj ReactTestUtils.cmt ReactTestUtils.bs.js)
+ (mode (promote (until-clean) (only ReactTestUtils.bs.js)))(deps (:inputs  ReactTestUtils.ast)  ReactTestUtils.cmi (:ast_deps .././src/ReactTestUtils.ast .././src/ReactTestUtils.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -bs-re-out -I ./legacy -I .    -w a -bs-package-name reason-react -bs-package-output commonjs:./src:.bs.js -o ReactTestUtils.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReactRouter.ast)
+ (deps (:inputs  ReasonReactRouter.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReactRouter.iast)
+ (deps (:inputs  ReasonReactRouter.rei) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReactRouter.cmi ReasonReactRouter.cmti)
+ (deps (:inputs  ReasonReactRouter.iast)  (:ast_deps .././src/ReasonReactRouter.ast .././src/ReasonReactRouter.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I ./legacy -I .    -w a -o ReasonReactRouter.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReactRouter.cmj ReasonReactRouter.cmt ReasonReactRouter.bs.js)
+ (mode (promote (until-clean) (only ReasonReactRouter.bs.js)))(deps (:inputs  ReasonReactRouter.ast)  ReasonReactRouter.cmi (:ast_deps .././src/ReasonReactRouter.ast .././src/ReasonReactRouter.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -bs-re-out -I ./legacy -I .    -w a -bs-package-name reason-react -bs-package-output commonjs:./src:.bs.js -o ReasonReactRouter.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReactErrorBoundary.ast)
+ (deps (:inputs  ReasonReactErrorBoundary.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReactErrorBoundary.iast)
+ (deps (:inputs  ReasonReactErrorBoundary.rei) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReactErrorBoundary.cmi ReasonReactErrorBoundary.cmti)
+ (deps (:inputs  ReasonReactErrorBoundary.iast)  (:ast_deps .././src/ReasonReactErrorBoundary.ast .././src/ReasonReactErrorBoundary.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I ./legacy -I .    -w a -o ReasonReactErrorBoundary.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReactErrorBoundary.cmj ReasonReactErrorBoundary.cmt ReasonReactErrorBoundary.bs.js)
+ (mode (promote (until-clean) (only ReasonReactErrorBoundary.bs.js)))(deps (:inputs  ReasonReactErrorBoundary.ast)  ReasonReactErrorBoundary.cmi (:ast_deps .././src/ReasonReactErrorBoundary.ast .././src/ReasonReactErrorBoundary.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -bs-re-out -I ./legacy -I .    -w a -bs-package-name reason-react -bs-package-output commonjs:./src:.bs.js -o ReasonReactErrorBoundary.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  ReasonReactErrorBoundary.bs.js ReasonReactRouter.bs.js ReactTestUtils.bs.js ReactDOMServer.bs.js ReactDOMStyle.bs.js ReactEvent.bs.js ReactDOM.bs.js React.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./node_modules/reason-react/src/legacy
+(rule
+(targets  ReactDOMRe.ast)
+ (deps (:inputs  ReactDOMRe.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMRe.cmj ReactDOMRe.cmi ReactDOMRe.cmt ReactDOMRe.bs.js)
+ (mode (promote (until-clean) (only ReactDOMRe.bs.js)))(deps (:inputs  ReactDOMRe.ast)  (:ast_deps ../.././src/legacy/ReactDOMRe.ast ) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src/legacy %{ast_deps}) (run bsc -bs-re-out -I . -I ..    -w a -bs-package-name reason-react -bs-package-output commonjs:./src/legacy:.bs.js -o ReactDOMRe.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReact.ast)
+ (deps (:inputs  ReasonReact.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReact.iast)
+ (deps (:inputs  ReasonReact.rei) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReact.cmi ReasonReact.cmti)
+ (deps (:inputs  ReasonReact.iast)  (:ast_deps ../.././src/legacy/ReasonReact.ast ../.././src/legacy/ReasonReact.iast) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src/legacy %{ast_deps}) (run bsc -bs-re-out -I . -I ..    -w a -o ReasonReact.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReact.cmj ReasonReact.cmt ReasonReact.bs.js)
+ (mode (promote (until-clean) (only ReasonReact.bs.js)))(deps (:inputs  ReasonReact.ast)  ReasonReact.cmi (:ast_deps ../.././src/legacy/ReasonReact.ast ../.././src/legacy/ReasonReact.iast) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src/legacy %{ast_deps}) (run bsc -bs-read-cmi -bs-re-out -I . -I ..    -w a -bs-package-name reason-react -bs-package-output commonjs:./src/legacy:.bs.js -o ReasonReact.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEventRe.ast)
+ (deps (:inputs  ReactEventRe.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEventRe.iast)
+ (deps (:inputs  ReactEventRe.rei) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEventRe.cmi ReactEventRe.cmti)
+ (deps (:inputs  ReactEventRe.iast)  (:ast_deps ../.././src/legacy/ReactEventRe.ast ../.././src/legacy/ReactEventRe.iast) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src/legacy %{ast_deps}) (run bsc -bs-re-out -I . -I ..    -w a -o ReactEventRe.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEventRe.cmj ReactEventRe.cmt ReactEventRe.bs.js)
+ (mode (promote (until-clean) (only ReactEventRe.bs.js)))(deps (:inputs  ReactEventRe.ast)  ReactEventRe.cmi (:ast_deps ../.././src/legacy/ReactEventRe.ast ../.././src/legacy/ReactEventRe.iast) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src/legacy %{ast_deps}) (run bsc -bs-read-cmi -bs-re-out -I . -I ..    -w a -bs-package-name reason-react -bs-package-output commonjs:./src/legacy:.bs.js -o ReactEventRe.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMServerRe.ast)
+ (deps (:inputs  ReactDOMServerRe.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMServerRe.cmj ReactDOMServerRe.cmi ReactDOMServerRe.cmt ReactDOMServerRe.bs.js)
+ (mode (promote (until-clean) (only ReactDOMServerRe.bs.js)))(deps (:inputs  ReactDOMServerRe.ast)  (:ast_deps ../.././src/legacy/ReactDOMServerRe.ast ) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src/legacy %{ast_deps}) (run bsc -bs-re-out -I . -I ..    -w a -bs-package-name reason-react -bs-package-output commonjs:./src/legacy:.bs.js -o ReactDOMServerRe.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReactCompat.ast)
+ (deps (:inputs  ReasonReactCompat.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReactCompat.iast)
+ (deps (:inputs  ReasonReactCompat.rei) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReactCompat.cmi ReasonReactCompat.cmti)
+ (deps (:inputs  ReasonReactCompat.iast)  (:ast_deps ../.././src/legacy/ReasonReactCompat.ast ../.././src/legacy/ReasonReactCompat.iast) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src/legacy %{ast_deps}) (run bsc -bs-re-out -I . -I ..    -w a -o ReasonReactCompat.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReactCompat.cmj ReasonReactCompat.cmt ReasonReactCompat.bs.js)
+ (mode (promote (until-clean) (only ReasonReactCompat.bs.js)))(deps (:inputs  ReasonReactCompat.ast)  ReasonReactCompat.cmi (:ast_deps ../.././src/legacy/ReasonReactCompat.ast ../.././src/legacy/ReasonReactCompat.iast) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src/legacy %{ast_deps}) (run bsc -bs-read-cmi -bs-re-out -I . -I ..    -w a -bs-package-name reason-react -bs-package-output commonjs:./src/legacy:.bs.js -o ReasonReactCompat.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReactOptimizedCreateClass.ast)
+ (deps (:inputs  ReasonReactOptimizedCreateClass.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReactOptimizedCreateClass.cmj ReasonReactOptimizedCreateClass.cmi ReasonReactOptimizedCreateClass.cmt ReasonReactOptimizedCreateClass.bs.js)
+ (mode (promote (until-clean) (only ReasonReactOptimizedCreateClass.bs.js)))(deps (:inputs  ReasonReactOptimizedCreateClass.ast)  (:ast_deps ../.././src/legacy/ReasonReactOptimizedCreateClass.ast ) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer/node_modules/reason-react -cwd ./src/legacy %{ast_deps}) (run bsc -bs-re-out -I . -I ..    -w a -bs-package-name reason-react -bs-package-output commonjs:./src/legacy:.bs.js -o ReasonReactOptimizedCreateClass.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  ReasonReactOptimizedCreateClass.bs.js ReasonReactCompat.bs.js ReactDOMServerRe.bs.js ReactEventRe.bs.js ReasonReact.bs.js ReactDOMRe.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir ./node_modules/reason-react(data_only_dirs .melange.eobjs))
+(subdir ./node_modules/reason-react/.melange.eobjs)
+
+(subdir ./src
+(rule
+(targets  App.ast)
+ (deps (:inputs  App.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-g -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  App.cmj App.cmi App.cmt App.bs.js)
+ (mode (promote (until-clean) (only App.bs.js)))(deps (:inputs  App.ast)  (:ast_deps .././src/App.ast ) ../bsconfig.json(alias ../node_modules/bs-css/src/bsb_world)(alias ../node_modules/bs-css-emotion/src/bsb_world)(alias ../node_modules/reason-react/src/bsb_world)(alias ../node_modules/reason-react/src/legacy/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I . -I ../node_modules/bs-css/src -I ../node_modules/bs-css-emotion/src -I ../node_modules/reason-react/src -I ../node_modules/reason-react/src/legacy   -w a -bs-package-name bs-css-emotion-footer -bs-package-output commonjs:./src:.bs.js -o App.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Footer.ast)
+ (deps (:inputs  Footer.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-g -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Footer.cmj Footer.cmi Footer.cmt Footer.bs.js)
+ (mode (promote (until-clean) (only Footer.bs.js)))(deps (:inputs  Footer.ast)  (:ast_deps .././src/Footer.ast ) ../bsconfig.json(alias ../node_modules/bs-css/src/bsb_world)(alias ../node_modules/bs-css-emotion/src/bsb_world)(alias ../node_modules/reason-react/src/bsb_world)(alias ../node_modules/reason-react/src/legacy/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I . -I ../node_modules/bs-css/src -I ../node_modules/bs-css-emotion/src -I ../node_modules/reason-react/src -I ../node_modules/reason-react/src/legacy   -w a -bs-package-name bs-css-emotion-footer -bs-package-output commonjs:./src:.bs.js -o Footer.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  FooterLi.ast)
+ (deps (:inputs  FooterLi.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-g -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  FooterLi.cmj FooterLi.cmi FooterLi.cmt FooterLi.bs.js)
+ (mode (promote (until-clean) (only FooterLi.bs.js)))(deps (:inputs  FooterLi.ast)  (:ast_deps .././src/FooterLi.ast ) ../bsconfig.json(alias ../node_modules/bs-css/src/bsb_world)(alias ../node_modules/bs-css-emotion/src/bsb_world)(alias ../node_modules/reason-react/src/bsb_world)(alias ../node_modules/reason-react/src/legacy/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I . -I ../node_modules/bs-css/src -I ../node_modules/bs-css-emotion/src -I ../node_modules/reason-react/src -I ../node_modules/reason-react/src/legacy   -w a -bs-package-name bs-css-emotion-footer -bs-package-output commonjs:./src:.bs.js -o FooterLi.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  FooterStyles.ast)
+ (deps (:inputs  FooterStyles.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -bs-g -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  FooterStyles.cmj FooterStyles.cmi FooterStyles.cmt FooterStyles.bs.js)
+ (mode (promote (until-clean) (only FooterStyles.bs.js)))(deps (:inputs  FooterStyles.ast)  (:ast_deps .././src/FooterStyles.ast ) ../bsconfig.json(alias ../node_modules/bs-css/src/bsb_world)(alias ../node_modules/bs-css-emotion/src/bsb_world)(alias ../node_modules/reason-react/src/bsb_world)(alias ../node_modules/reason-react/src/legacy/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/bs-css-emotion-footer -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I . -I ../node_modules/bs-css/src -I ../node_modules/bs-css-emotion/src -I ../node_modules/reason-react/src -I ../node_modules/reason-react/src/legacy   -w a -bs-package-name bs-css-emotion-footer -bs-package-output commonjs:./src:.bs.js -o FooterStyles.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  FooterStyles.bs.js FooterLi.bs.js Footer.bs.js App.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir .melange.eobjs)
+
+(data_only_dirs node_modules .melange.eobjs)
+(alias (name bsb_world))
+;;;;BSB GENERATED: NO EDIT}

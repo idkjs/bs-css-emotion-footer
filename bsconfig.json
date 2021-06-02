@@ -3,17 +3,24 @@
   "reason": {
     "react-jsx": 3
   },
-  "refmt": 3,
-  "warnings": {
-    "number":  "+A-32-34-44",
-    "error": "+A-32-34-44"
-  },
+  "bsc-flags": [ "-bs-g" ],
   "sources": [
     {
-      "dir": "src"
+      "dir": "src",
+      "subdirs": true
     }
   ],
-  "bs-dependencies": [
-    "bs-css","bs-css-emotion","reason-react"
-  ]
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "warnings": {
+    "number": "+A-32-34-44",
+    "error": "+A-32-34-44"
+  },
+
+  "bs-dependencies": [ "bs-css", "bs-css-emotion", "reason-react" ]
 }
