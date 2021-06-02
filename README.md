@@ -1,6 +1,6 @@
 # [reasonml-labs/bs-css](https://github.com/reasonml-labs/bs-css) emotion footer demo
 
-## `Melange` + `Reason` with [`Melange`](https://github.com/melange-re/melange) as the build system.
+## [`bs-css`](https://github.com/reasonml-labs/bs-css) + `Reason` with [`Melange`](https://github.com/melange-re/melange) as the build system.
 
 This is a port of this [codepen](https://codepen.io/julesforrest/pen/qLpgNB).
 
