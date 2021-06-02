@@ -11,7 +11,7 @@ See discussion [here](https://github.com/reasonml-labs/bs-css/issues/190#issue-5
 ![screenshot](./screenshot.png)
 
 ## Running
-Running `yarn && yarn start` will install the deps then build the use `esbuild` to create the `js` file being called in `index.html`.
+Running `yarn && yarn start` will install the deps then build with `esbuild` to create the `js` file being called in `index.html`.
 
 For file watching during development, the project uses [redemon](https://github.com/ulrikstrid/redemon) which you can run with `yarn watcher` after installing `redemon`.
 
